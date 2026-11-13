@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sara Cosivi — CV</title>
+<meta name="description" content="Sara Cosivi, LLM candidate in Competition and Innovation at the London School of Economics.">
+<meta property="og:title" content="Sara Cosivi — CV">
+<meta property="og:description" content="LLM candidate at LSE. Competition law, digital regulation and AI governance.">
+<meta property="og:type" content="website">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* ===== Colours: change these to restyle the whole site ===== */
+  :root {
+    --bg: #EEF3F1;
+    --card: #FFFFFF;
+    --ink: #17282C;
+    --text: #3A4A4D;
+    --muted: #6B7B7E;
+    --line: #DCE5E2;
+    --chip: #F1F5F4;
+    --chip-line: #DCE5E2;
+    --accent: #1F6B58;
+    --accent-soft: #E0EFEA;
+    --gold: #C6A35A;
+    --gold-soft: #FBF5E8;
+    --shadow: 0 1px 2px rgba(23,40,44,.04), 0 8px 24px rgba(23,40,44,.05);
+    color-scheme: light;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #101B1D; --card: #172527; --ink: #E7EEEC; --text: #C3CFCC; --muted: #8C9C99;
+      --line: #263638; --chip: #1D2E30; --chip-line: #2C3F41; --accent: #6FC4AA; --accent-soft: #1C3833;
+      --gold: #D9B96E; --gold-soft: #2A2717; --shadow: none; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #101B1D; --card: #172527; --ink: #E7EEEC; --text: #C3CFCC; --muted: #8C9C99;
+    --line: #263638; --chip: #1D2E30; --chip-line: #2C3F41; --accent: #6FC4AA; --accent-soft: #1C3833;
+    --gold: #D9B96E; --gold-soft: #2A2717; --shadow: none; color-scheme: dark;
+  }
+
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-behavior: smooth; scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 24px); }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+         font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+  svg.i { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+
+  .wrap { max-width: 920px; margin: 0 auto; padding: 32px 20px 64px; display: grid; gap: 24px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 32px 36px; box-shadow: var(--shadow); }
+
+  /* Hero */
+  .hero { display: grid; grid-template-columns: 150px 1fr; gap: 32px; align-items: center; }
+  .avatar { width: 150px; height: 150px; border-radius: 50%; padding: 4px; border: 2px solid var(--line); position: relative; }
+  .avatar img, .avatar .initials { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block; }
+  .avatar .initials { display: grid; place-items: center; background: var(--accent); color: var(--card); font-size: 3rem; font-weight: 700; letter-spacing: .02em; }
+  .hero h1 { margin: 0; color: var(--ink); font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 800; letter-spacing: -.02em; line-height: 1.1; }
+  .tagline { margin: 8px 0 18px; color: var(--muted); font-size: .95rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }
+  .chips + .chips { margin-top: 10px; }
+  .chip { display: inline-flex; align-items: center; gap: 8px; background: var(--chip); border: 1px solid var(--chip-line);
+          border-radius: 999px; padding: 6px 14px; font-size: .92rem; color: var(--ink); text-decoration: none; }
+  a.chip:hover { border-color: var(--accent); color: var(--accent); }
+  .chip.small { font-size: .85rem; padding: 4px 12px; color: var(--muted); }
+  .chip.small svg { color: var(--muted); }
+
+  /* Section headings */
+  .card > h2 { display: flex; align-items: center; gap: 14px; margin: 0 0 24px; padding-bottom: 18px; border-bottom: 1px solid var(--line);
+               color: var(--ink); font-size: 1.15rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+  .card > h2 svg { color: var(--accent); width: 22px; height: 22px; }
+  .lead { margin: 0; font-size: 1.05rem; line-height: 1.75; max-width: 70ch; }
+
+  /* Entries */
+  .item { display: grid; grid-template-columns: 44px 1fr; gap: 0 18px; padding: 22px 0; border-top: 1px solid var(--line); }
+  .item:first-of-type { border-top: 0; padding-top: 0; }
+  .item:last-child { padding-bottom: 0; }
+  .logo { width: 44px; height: 44px; border-radius: 10px; display: grid; place-items: center; overflow: hidden; background: var(--chip); border: 1px solid var(--chip-line); }
+  .logo img { width: 28px; height: 28px; object-fit: contain; }
+  .logo .lf, .lf { font-size: .78rem; font-weight: 700; color: var(--accent); letter-spacing: .02em; }
+  .item-head { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .item h3 { margin: 0; color: var(--ink); font-size: 1.12rem; font-weight: 700; line-height: 1.35; }
+  .role { margin: 2px 0 0; color: var(--accent); font-weight: 500; }
+  .meta { text-align: right; font-size: .92rem; }
+  .meta .dates { display: block; color: var(--text); font-weight: 500; white-space: nowrap; }
+  .meta .place { display: block; color: var(--muted); }
+  .bullets { margin: 12px 0 0; padding-left: 1.1em; }
+  .bullets li { margin-bottom: 6px; }
+  .bullets li::marker { color: var(--accent); }
+  .bullets b { color: var(--ink); font-weight: 600; }
+  .about { margin: 10px 0 0; color: var(--muted); font-size: .94rem; }
+  .badge { display: inline-flex; align-items: center; gap: 6px; margin-top: 12px; background: var(--gold-soft); border: 1px solid var(--gold);
+           color: var(--ink); border-radius: 999px; padding: 4px 12px; font-size: .86rem; font-weight: 500; }
+  .badge svg { color: var(--gold); }
+  .sub-item { display: grid; grid-template-columns: 30px 1fr; gap: 0 12px; margin-top: 14px; }
+  .sub-item .logo { width: 30px; height: 30px; border-radius: 7px; }
+  .sub-item .logo img { width: 20px; height: 20px; }
+  .sub-item h4 { margin: 0; color: var(--ink); font-size: 1rem; font-weight: 600; }
+
+  /* Writing */
+  .writing { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .post { border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px; background: var(--card); }
+  .post-src { display: flex; align-items: center; gap: 10px; font-size: .86rem; color: var(--muted); }
+  .post-src .logo { width: 28px; height: 28px; border-radius: 7px; }
+  .post-src .logo img { width: 18px; height: 18px; }
+  .rtype { font-size: .74rem; font-weight: 600; color: var(--accent); border: 1px solid var(--accent); border-radius: 6px; padding: 1px 7px; }
+  .rnote { margin: 0; font-size: .92rem; color: var(--muted); line-height: 1.5; }
+  .post h3 { margin: 0; color: var(--ink); font-size: 1.02rem; font-weight: 600; line-height: 1.4; }
+  .post .tags { margin-top: auto; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+  .tags li { font-size: .78rem; color: var(--accent); background: var(--accent-soft); border-radius: 999px; padding: 2px 10px; font-weight: 500; }
+
+  /* Certificates */
+  .cert { display: grid; grid-template-columns: 190px 280px 1fr; gap: 16px; align-items: center; padding: 14px 0; border-top: 1px solid var(--line); }
+  .cert:first-of-type { border-top: 0; padding-top: 0; }
+  .cert-org { display: flex; align-items: center; gap: 12px; color: var(--ink); font-weight: 700; }
+  .cert-org .logo { width: 32px; height: 32px; border-radius: 8px; }
+  .cert-org .logo img { width: 20px; height: 20px; }
+  .cert p { margin: 0; color: var(--muted); font-size: .94rem; }
+
+  /* Skills */
+  .skills { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+  .skills > div + div { border-left: 1px solid var(--line); padding-left: 40px; }
+  .skills h3 { margin: 0 0 16px; font-size: .85rem; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; font-weight: 700; }
+  .group { margin-bottom: 22px; }
+  .group h4 { display: flex; align-items: center; gap: 8px; margin: 0 0 10px; font-size: .8rem; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; font-weight: 600; }
+  .pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .pills li { background: var(--chip); border: 1px solid var(--chip-line); border-radius: 999px; padding: 5px 14px; font-size: .9rem; color: var(--ink); }
+  .pills li.key { background: var(--gold-soft); border-color: var(--gold); }
+  .callout { margin-top: 8px; border-left: 3px solid var(--accent); background: var(--chip); border-radius: 0 12px 12px 0; padding: 18px 20px; }
+  .callout p { margin: 0; color: var(--ink); font-style: italic; line-height: 1.6; }
+  .callout span { display: block; margin-top: 10px; font-size: .86rem; color: var(--muted); }
+
+  /* Languages */
+  .langs { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+  .lang { display: grid; grid-template-columns: 28px 130px 1fr 70px; align-items: center; gap: 12px; }
+  .lang .flag { font-size: 1.15rem; line-height: 1; }
+  .lang .name { color: var(--ink); font-weight: 500; }
+  .bar { height: 6px; border-radius: 999px; background: var(--chip); overflow: hidden; }
+  .bar span { display: block; height: 100%; border-radius: 999px; background: var(--accent); opacity: .75; }
+  .lang .level { text-align: right; color: var(--muted); font-size: .9rem; }
+
+  /* Interests */
+  .interests { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .interest { text-align: center; }
+  .interest .ico { width: 56px; height: 56px; margin: 0 auto 14px; border-radius: 14px; display: grid; place-items: center;
+                   background: var(--chip); border: 1px solid var(--chip-line); color: var(--accent); }
+  .interest .ico svg { width: 24px; height: 24px; }
+  .interest h3 { margin: 0 0 14px; color: var(--ink); font-size: .95rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+  .interest ul { list-style: none; margin: 0; padding: 0; text-align: left; display: grid; gap: 10px; font-size: .94rem; }
+  .interest li { display: grid; grid-template-columns: 18px 1fr; gap: 10px; align-items: start; }
+  .interest li svg { margin-top: 4px; color: var(--muted); }
+
+  footer { text-align: center; color: var(--muted); font-size: .86rem; padding-top: 8px; }
+
+  /* Theme switch */
+  .theme { position: fixed; top: calc(env(safe-area-inset-top, 0px) + 16px); right: 16px; z-index: 20; display: flex; align-items: center; gap: 10px;
+           background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 6px 8px 6px 16px; box-shadow: var(--shadow);
+           font: inherit; font-size: .9rem; font-weight: 500; color: var(--muted); cursor: pointer; }
+  .switch { width: 40px; height: 22px; border-radius: 999px; background: var(--chip); border: 1px solid var(--chip-line); position: relative; }
+  .switch::after { content: ""; position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; border-radius: 50%; background: var(--muted); transition: transform .2s; }
+  .dark .switch::after { transform: translateX(18px); background: var(--accent); }
+
+  /* Side progress nav */
+  .dots { position: fixed; right: 22px; top: 50%; transform: translateY(-50%); z-index: 15; display: grid; gap: 14px; list-style: none; margin: 0; padding: 0; }
+  .dots a { display: flex; justify-content: flex-end; align-items: center; gap: 10px; height: 14px; text-decoration: none; }
+  .dots a::after { content: ""; width: 18px; height: 2px; border-radius: 2px; background: var(--muted); opacity: .5; transition: width .2s, background .2s; }
+  .dots a.active::after { width: 30px; background: var(--accent); opacity: 1; }
+  .dots a span { font-size: .8rem; color: var(--muted); opacity: 0; transition: opacity .2s; white-space: nowrap; }
+  .dots a:hover span, .dots a:focus-visible span { opacity: 1; }
+
+  .to-top { position: fixed; right: 20px; bottom: calc(env(safe-area-inset-bottom, 0px) + 20px); width: 48px; height: 48px; border-radius: 50%;
+            background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow); color: var(--accent); display: grid; place-items: center;
+            text-decoration: none; opacity: 0; pointer-events: none; transition: opacity .2s; }
+  .to-top.show { opacity: 1; pointer-events: auto; }
+
+  @media (max-width: 1100px) { .dots { display: none; } }
+  @media (max-width: 760px) {
+    .card { padding: 24px 20px; border-radius: 16px; }
+    .hero { grid-template-columns: 1fr; text-align: center; gap: 18px; padding-top: 56px; }
+    .avatar { margin: 0 auto; width: 120px; height: 120px; }
+    .chips { justify-content: center; }
+    .meta { text-align: left; }
+    .writing, .skills, .interests { grid-template-columns: 1fr; }
+    .skills > div + div { border-left: 0; padding-left: 0; }
+    .cert { grid-template-columns: 1fr; gap: 6px; }
+    .lang { grid-template-columns: 24px 1fr 60px; }
+    .lang .bar { grid-column: 1 / -1; grid-row: 2; }
+  }
+  @media print { .theme, .dots, .to-top { display: none; } .card { box-shadow: none; break-inside: avoid; } }
+</style>
+<script>
+  // Tries the site's own icon first, then Google's icon service, then shows initials
+  function logoFail(img) {
+    if (img.dataset.alt) { const a = img.dataset.alt; img.dataset.alt = ''; img.src = a; }
+    else { img.outerHTML = '<span class="lf">' + img.dataset.i + '</span>'; }
+  }
+</script>
+</head>
+<body>
+
+<button class="theme" id="theme" type="button" aria-label="Toggle dark mode">Theme <span class="switch"></span></button>
+
+<ul class="dots" aria-label="Sections">
+  <li><a href="#profile"><span>Profile</span></a></li>
+  <li><a href="#education"><span>Education</span></a></li>
+  <li><a href="#legal"><span>Legal experience</span></a></li>
+  <li><a href="#experience"><span>Professional experience</span></a></li>
+  <li><a href="#writing"><span>Writing</span></a></li>
+  <li><a href="#languages"><span>Languages</span></a></li>
+  <li><a href="#skills"><span>Skills</span></a></li>
+  <li><a href="#certificates"><span>Certificates</span></a></li>
+  <li><a href="#interests"><span>Interests</span></a></li>
+  <li><a href="#reading"><span>Reading list</span></a></li>
+</ul>
+
+<div class="wrap">
+
+  <!-- Hero -->
+  <header class="card hero" id="top">
+    <div class="avatar">
+      <!-- Add photo.jpg next to this file and it appears here automatically -->
+      <img src="photo.jpg" alt="Sara Cosivi" onerror="this.remove()">
+      <div class="initials" aria-hidden="true">SC</div>
+    </div>
+    <div>
+      <h1>Sara Cosivi</h1>
+      <p class="tagline">Competition · Digital Regulation · AI Governance</p>
+      <ul class="chips">
+        <li><a class="chip" href="mailto:s.cosivi@lse.ac.uk"><svg class="i" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>s.cosivi@lse.ac.uk</a></li>
+        <li><a class="chip" href="https://www.linkedin.com/in/sara-cosivi/" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a></li>
+      </ul>
+      <ul class="chips">
+        <li class="chip small"><svg class="i" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>London</li>
+        <li class="chip small"><svg class="i" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M8 17h8"/></svg>British &amp; Italian citizen</li>
+        <li class="chip small"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>5 languages</li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Profile -->
+  <section class="card" id="profile">
+    <h2><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Profile</h2>
+    <p class="lead">I’m an LLM candidate at LSE specialising in Competition and Innovation. I’ve advised on crypto-asset regulation and tax at O2K, tested IT controls at EY, and written about US immigration policy for a legal tech start-up. What ties it together is an interest in how competition law, platform regulation and AI governance shape digital markets. I’m working towards qualifying as a solicitor in England and Wales.</p>
+  </section>
+
+  <!-- Education -->
+  <section class="card" id="education">
+    <h2><svg class="i" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Education</h2>
+
+    <article class="item">
+      <div class="logo"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.lse.ac.uk&size=64" alt="" onerror="this.outerHTML='<span class=lf>LSE</span>'"></div>
+      <div>
+        <div class="item-head">
+          <div><h3>London School of Economics</h3><p class="role">LLM · Competition and Innovation</p></div>
+          <div class="meta"><span class="dates">Sep 2026 — Jun 2027</span><span class="place">London 🇬🇧</span></div>
+        </div>
+        <ul class="bullets">
+          <li><b>Tech &amp; regulation:</b> Code, Power and Law; Advanced Digital Platform Regulation; Digital Rights, Privacy and Security.</li>
+          <li><b>Competition &amp; markets:</b> Advanced Competition Law; Mergers, Acquisitions and Restructurings in Europe; European Capital Markets Law; International Economic Law.</li>
+          <li><b>Societies:</b> AI, Law and Governance; Competition Law Society; Bacchus Wine.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="logo"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.uva.nl&size=64" alt="" onerror="this.outerHTML='<span class=lf>UvA</span>'"></div>
+      <div>
+        <div class="item-head">
+          <div><h3>University of Amsterdam</h3><p class="role">BSc Politics, Psychology, Law and Economics · Law major</p></div>
+          <div class="meta"><span class="dates">Sep 2022 — Dec 2025</span><span class="place">Amsterdam 🇳🇱</span></div>
+        </div>
+        <ul class="bullets">
+          <li><b>Grade:</b> 7.65/10 (2:1 equivalent).</li>
+          <li><b>Thesis:</b> <em>Same Directive, Different Outcomes</em>, a comparative study of gender quotas on corporate boards (8.1/10).</li>
+          <li><b>Activities:</b> PPLE volleyball team; SIB Amsterdam committee, organising the 2024 Networking Gala (150+ guests) and a visit to the International Criminal Court.</li>
+          <li><b>Exchange:</b></li>
+        </ul>
+        <div class="sub-item">
+          <div class="logo"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.hku.hk&size=64" alt="" onerror="this.outerHTML='<span class=lf>HKU</span>'"></div>
+          <div>
+            <div class="item-head">
+              <h4>The University of Hong Kong, Faculty of Law</h4>
+              <div class="meta"><span class="dates">Sep 2025 — Dec 2025</span><span class="place">Hong Kong 🇭🇰</span></div>
+            </div>
+            <ul class="bullets">
+              <li>Courses: Competition Law in the US, Privacy and Data Protection, Regulation of Financial Markets, Arbitration and Conflict of Laws in Greater China.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="logo"><img src="https://www.usal.es/favicon.ico" data-alt="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.usal.es&size=64" data-i="USAL" alt="" onerror="logoFail(this)"></div>
+      <div>
+        <div class="item-head">
+          <div><h3>Universidad de Salamanca</h3><p class="role">Summer School · Spanish Language and Culture</p></div>
+          <div class="meta"><span class="dates">Jun 2022</span><span class="place">Salamanca 🇪🇸</span></div>
+        </div>
+        <ul class="bullets">
+          <li>Three-week advanced-level course (60 hours), with the top grade, Sobresaliente, in Spanish language and in oral skills.</li>
+          <li>Included a module on Spanish and Latin American cinema.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="logo"><img src="https://www.lyceemoliere.com.br/favicon.ico" data-alt="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.lyceemoliere.com.br&size=64" data-i="LM" alt="" onerror="logoFail(this)"></div>
+      <div>
+        <div class="item-head">
+          <div><h3>Lycée Molière, French International School of Rio de Janeiro</h3><p class="role">Baccalauréat Général · Option Internationale du Baccalauréat (OIB), Brazilian section</p></div>
+          <div class="meta"><span class="dates">2021</span><span class="place">Rio de Janeiro, Brazil 🇧🇷</span></div>
+        </div>
+        <ul class="bullets"><li><b>Grade:</b> 17.11/20, Mention Très Bien.</li><li><b>Core subjects:</b> Mathematics; Economics and Social Sciences; History and Geography; Geopolitics and Political Science; Portuguese and Brazilian literature, history and geography.</li></ul>
+      </div>
+    </article>
+  </section>
+
+  <!-- Legal experience -->
+  <section class="card" id="legal">
+    <h2><svg class="i" viewBox="0 0 24 24"><path d="M12 3v18M5 21h14M3 7h18M6 7l-3 7a3 3 0 0 0 6 0zM18 7l-3 7a3 3 0 0 0 6 0z"/></svg>Legal Experience</h2>
+
+    <article class="item">
+      <div class="logo"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.lse.ac.uk&size=64" alt="" onerror="this.outerHTML='<span class=lf>LSE</span>'"></div>
+      <div>
+        <div class="item-head">
+          <div><h3>LSE Legal Advice Centre</h3><p class="role">Student Outdoor Clerk · Court Attendance</p></div>
+          <div class="meta"><span class="dates">2026 — 2027</span><span class="place">London 🇬🇧</span></div>
+        </div>
+        <ul class="bullets">
+          <li>Joining the Student Outdoor Clerks Scheme to gain first-hand exposure to UK courts and the English legal system.</li>
+          <li>Attending court on real client matters, writing attendance notes and maintaining strict client confidentiality.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="logo"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://o2k.tech&size=64" alt="" onerror="this.outerHTML='<span class=lf>O2K</span>'"></div>
+      <div>
+        <div class="item-head">
+          <div><h3>O2K</h3><p class="role">Tax &amp; Legal Intern · Crypto-assets</p></div>
+          <div class="meta"><span class="dates">Feb 2026 — Jun 2026</span><span class="place">Amsterdam 🇳🇱</span></div>
+        </div>
+        <ul class="bullets">
+          <li><b>Research:</b> international tax and regulatory frameworks for crypto-assets.</li>
+          <li><b>Drafting:</b> legal memoranda and client materials on cryptocurrency taxation and compliance.</li>
+          <li><b>MiCA guides:</b> bi-weekly updates to the firm’s jurisdiction guides, including Portugal and Latvia.</li>
+          <li><b>Events:</b> attended the EU Tax Symposium 2026.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="logo"><img src="https://extraordinary.com/favicon.ico" data-alt="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://extraordinary.com&size=64" data-i="EX" alt="" onerror="logoFail(this)"></div>
+      <div>
+        <div class="item-head">
+          <div><h3>Extraordinary</h3><p class="role">Content Research &amp; Writing · Legal Tech</p></div>
+          <div class="meta"><span class="dates">Jun 2025 — Aug 2025</span><span class="place">San Francisco (remote) 🇺🇸</span></div>
+        </div>
+        <p class="about">Start-up pairing immigration lawyers with software to secure O-1 visas, backed by Founders Fund, Andreessen Horowitz and Paradigm.</p>
+        <ul class="bullets">
+          <li>Wrote evidence-based guides on the O-1 criteria, tracing how USCIS interpretation shifted across administrations.</li>
+          <li>Analysed USCIS policy guidance to pinpoint changes in the agency’s position and explain them clearly for applicants.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="logo"><span class="lf">GT</span></div>
+      <div>
+        <div class="item-head">
+          <div><h3>GT Lawyers &amp; Lauro Gama Advogados</h3><p class="role">Shadow Internship · Commercial &amp; Arbitration</p></div>
+          <div class="meta"><span class="dates">Oct 2019</span><span class="place">Rio de Janeiro 🇧🇷</span></div>
+        </div>
+        <ul class="bullets">
+          <li>Exposure to cross-border commercial work across pharmaceuticals, real estate, mining and technology.</li>
+          <li>Observed domestic and international arbitration and trade law proceedings.</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <!-- Professional experience -->
+  <section class="card" id="experience">
+    <h2><svg class="i" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Professional Experience</h2>
+
+    <article class="item">
+      <div class="logo"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.ey.com&size=64" alt="" onerror="this.outerHTML='<span class=lf>EY</span>'"></div>
+      <div>
+        <div class="item-head">
+          <div><h3>EY</h3><p class="role">Summer Intern · Technology Risk</p></div>
+          <div class="meta"><span class="dates">Jul 2026 — Aug 2026</span><span class="place">Edinburgh 🇬🇧</span></div>
+        </div>
+        <ul class="bullets">
+          <li>Tested IT general controls across client systems, identifying design and operating gaps in user access management and data protection.</li>
+          <li>Researched the Strait of Hormuz energy crisis and presented recommendations to partners on supporting affected clients.</li>
+        </ul>
+        <span class="badge"><svg class="i" viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>Offered a graduate role</span>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="logo"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://econometria.com.co&size=64" alt="" onerror="this.outerHTML='<span class=lf>EC</span>'"></div>
+      <div>
+        <div class="item-head">
+          <div><h3>Econometría Consultores</h3><p class="role">Policy &amp; Legal Intern · Public Policy</p></div>
+          <div class="meta"><span class="dates">Nov 2024 — Feb 2025</span><span class="place">Bogotá (remote) 🇨🇴</span></div>
+        </div>
+        <ul class="bullets">
+          <li>Interviewed participants in the Emprendedoras Bavaria programme and wrote up findings for the project team.</li>
+          <li>Mapped Latin American development-aid funding from tender notices and presented the patterns in a report.</li>
+          <li><b>Climate finance:</b> for the USAID-funded IN4C Climate Investment Program, run with Chemonics, surveyed international financial instruments that promote climate-compatible investment, analysing 12 of the 76 in the review. All work was in Spanish.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="logo"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.rostraeconomica.nl&size=64" alt="" onerror="this.outerHTML='<span class=lf>RE</span>'"></div>
+      <div>
+        <div class="item-head">
+          <div><h3>Rostra Economica</h3><p class="role">Politics Editor · Student Journalism</p></div>
+          <div class="meta"><span class="dates">Oct 2023 — Jun 2025</span><span class="place">Amsterdam 🇳🇱</span></div>
+        </div>
+        <ul class="bullets">
+          <li>Copy-edited contributors’ pieces for the Netherlands’ oldest student magazine.</li>
+          <li>Wrote analysis on Spain’s amnesty law and celebrity influence in the 2024 US election.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="logo"><img src="https://www.jangada.org/favicon.ico" data-alt="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.jangada.org&size=64" data-i="JA" alt="" onerror="logoFail(this)"></div>
+      <div>
+        <div class="item-head">
+          <div><h3>Jangada Film Festival</h3><p class="role">Volunteer Interpreter · Brazilian Cinema</p></div>
+          <div class="meta"><span class="dates">Every April since 2022</span><span class="place">Paris 🇫🇷</span></div>
+        </div>
+        <ul class="bullets">
+          <li>Live Portuguese-to-French interpretation for Brazilian actors, screenwriters and directors at Q&amp;As, panels and press exchanges.</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <!-- Writing -->
+  <section class="card" id="writing">
+    <h2><svg class="i" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>Writing</h2>
+    <div class="writing">
+      <article class="post">
+        <div class="post-src"><div class="logo"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://o2k.tech&size=64" alt="" onerror="this.outerHTML='<span class=lf>O2K</span>'"></div>O2K.tech · April 2026</div>
+        <h3>EU Inc. Explained: What the 28th Regime Means for Startups</h3>
+        <ul class="tags"><li>EU company law</li><li>Startups</li></ul>
+      </article>
+      <article class="post">
+        <div class="post-src"><div class="logo"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://o2k.tech&size=64" alt="" onerror="this.outerHTML='<span class=lf>O2K</span>'"></div>O2K.tech · April 2026</div>
+        <h3>Why Europe Can’t Turn €35 Trillion in Savings Into Growth</h3>
+        <ul class="tags"><li>Capital markets</li><li>EU policy</li></ul>
+      </article>
+      <article class="post">
+        <div class="post-src"><div class="logo"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.rostraeconomica.nl&size=64" alt="" onerror="this.outerHTML='<span class=lf>RE</span>'"></div>Rostra Economica, print · January 2024</div>
+        <h3>Of Course, This Is Biased: A Critique of Objectivity</h3>
+        <ul class="tags"><li>Philosophy of science</li></ul>
+      </article>
+      <article class="post">
+        <div class="post-src"><div class="logo"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.rostraeconomica.nl&size=64" alt="" onerror="this.outerHTML='<span class=lf>RE</span>'"></div>Rostra Economica · December 2023</div>
+        <h3>An Amnesty Law in Exchange for a New Government</h3>
+        <ul class="tags"><li>Constitutional law</li><li>Spain</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- Languages -->
+  <section class="card" id="languages">
+    <h2><svg class="i" viewBox="0 0 24 24"><path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg>Languages</h2>
+    <ul class="langs">
+      <li class="lang"><span class="flag">🇬🇧</span><span class="name">English</span><span class="bar"><span style="width:100%"></span></span><span class="level">Native</span></li>
+      <li class="lang"><span class="flag">🇫🇷</span><span class="name">French</span><span class="bar"><span style="width:100%"></span></span><span class="level">Native</span></li>
+      <li class="lang"><span class="flag">🇮🇹</span><span class="name">Italian</span><span class="bar"><span style="width:100%"></span></span><span class="level">Native</span></li>
+      <li class="lang"><span class="flag">🇧🇷</span><span class="name">Portuguese</span><span class="bar"><span style="width:100%"></span></span><span class="level">Native</span></li>
+      <li class="lang"><span class="flag">🇪🇸</span><span class="name">Spanish</span><span class="bar"><span style="width:85%"></span></span><span class="level">Fluent</span></li>
+    </ul>
+  </section>
+
+  <!-- Skills -->
+  <section class="card" id="skills">
+    <h2><svg class="i" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></svg>Skills</h2>
+    <div class="skills">
+      <div>
+        <h3>Hard skills</h3>
+        <div class="group">
+          <h4><svg class="i" viewBox="0 0 24 24"><path d="M12 3v18M5 21h14M3 7h18M6 7l-3 7a3 3 0 0 0 6 0zM18 7l-3 7a3 3 0 0 0 6 0z"/></svg>Legal &amp; regulatory</h4>
+          <ul class="pills"><li class="key">Regulatory analysis</li><li>Legal research</li><li>Memo drafting</li><li>Competition law</li><li>MiCA &amp; crypto-assets</li><li>Data protection</li><li>Comparative law</li></ul>
+        </div>
+        <div class="group">
+          <h4><svg class="i" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 9h6v6H9zM9 1v4M15 1v4M9 19v4M15 19v4M1 9h4M1 15h4M19 9h4M19 15h4"/></svg>Tools</h4>
+          <ul class="pills"><li class="key">Harvey AI</li><li>Excel</li><li>PowerPoint</li><li>IBM SPSS</li></ul>
+        </div>
+        <div class="group">
+          <h4><svg class="i" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>Research</h4>
+          <ul class="pills"><li>Stakeholder interviews</li><li>Qualitative research</li><li>Policy analysis</li><li>Copy-editing</li></ul>
+        </div>
+      </div>
+      <div>
+        <h3>Soft skills</h3>
+        <div class="group">
+          <h4><svg class="i" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Communication</h4>
+          <ul class="pills"><li class="key">Live interpretation</li><li>Cross-cultural communication</li><li>Writing for non-lawyers</li></ul>
+        </div>
+        <div class="group">
+          <h4><svg class="i" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg>Mindset</h4>
+          <ul class="pills"><li>Adaptability</li><li>Teamwork</li><li>Problem solving</li><li>Time management</li><li>Resilience</li></ul>
+        </div>
+        <div class="callout">
+          <p>“Sara demonstrated a keen ability to handle complex assignments with professionalism and skill, making significant contributions to our team.”</p>
+          <span>Carolina Murgueitio, General Director, Econometría Consultores</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section class="card" id="certificates">
+    <h2><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></svg>Certificates &amp; Events</h2>
+    <div class="cert">
+      <div class="cert-org"><div class="logo"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=www.cliffordchance.com&size=64" alt="" onerror="this.outerHTML='<span class=lf>CC</span>'"></div>Clifford Chance</div>
+      <div><span class="chip">Cyber Security Virtual Internship</span></div>
+      <p>ICO dawn raid guidance, data breach response and a data-related damages claim. Nov 2026</p>
+    </div>
+    <div class="cert">
+      <div class="cert-org"><div class="logo"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=www.twobirds.com&size=64" alt="" onerror="this.outerHTML='<span class=lf>B&amp;B</span>'"></div>Bird &amp; Bird</div>
+      <div><span class="chip">Commercial Law Virtual Experience</span></div>
+      <p>Trade mark infringement memo, software licence drafting and patent analysis. Nov 2026</p>
+    </div>
+    <div class="cert">
+      <div class="cert-org"><div class="logo"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=o2k.tech&size=64" alt="" onerror="this.outerHTML='<span class=lf>O2K</span>'"></div>O2K</div>
+      <div><span class="chip">Key Taxable Events in Crypto</span></div>
+      <p>Credential 2026060603C2DS. Mar 2026</p>
+    </div>
+    <div class="cert">
+      <div class="cert-org"><div class="logo"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=o2k.tech&size=64" alt="" onerror="this.outerHTML='<span class=lf>O2K</span>'"></div>O2K</div>
+      <div><span class="chip">Crypto-Assets and Their Taxation</span></div>
+      <p>Credential 20260603C1DS. Mar 2026</p>
+    </div>
+    <div class="cert">
+      <div class="cert-org"><div class="logo"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=www.legalcheek.com&size=64" alt="" onerror="this.outerHTML='<span class=lf>LC</span>'"></div>Legal Cheek</div>
+      <div><span class="chip">Virtual Vacation Scheme</span></div>
+      <p>Spring 2026 virtual vacation scheme. Mar 2026</p>
+    </div>
+    <div class="cert">
+      <div class="cert-org"><div class="logo"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=o2k.tech&size=64" alt="" onerror="this.outerHTML='<span class=lf>O2K</span>'"></div>O2K</div>
+      <div><span class="chip">EU Tax Symposium</span></div>
+      <p>Attended the 2026 symposium on EU tax policy</p>
+    </div>
+    <div class="cert">
+      <div class="cert-org"><div class="logo"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=www.freshfields.com&size=64" alt="" onerror="this.outerHTML='<span class=lf>FF</span>'"></div>Freshfields</div>
+      <div><span class="chip">Law &amp; Fintech</span></div>
+      <p>Job simulation on regulatory analysis, risk assessment and fintech legal issues. Jan 2025</p>
+    </div>
+  </section>
+
+  <!-- Interests -->
+  <section class="card" id="interests">
+    <h2><svg class="i" viewBox="0 0 24 24"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"/></svg>Interests</h2>
+    <div class="interests">
+      <div class="interest">
+        <div class="ico"><svg class="i" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 9h6v6H9zM9 1v4M15 1v4M9 19v4M15 19v4M1 9h4M1 15h4M19 9h4M19 15h4"/></svg></div>
+        <h3>Law &amp; Tech</h3>
+        <ul>
+          <li><svg class="i" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>Legal tech, hands-on with Harvey AI</li>
+          <li><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 2"/></svg>AI governance through LSE’s AI, Law &amp; Governance society</li>
+        </ul>
+      </div>
+      <div class="interest">
+        <div class="ico"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></div>
+        <h3>World Affairs</h3>
+        <ul>
+          <li><svg class="i" viewBox="0 0 24 24"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"/></svg>Scottish-Spanish mum and Italian dad</li>
+          <li><svg class="i" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Born in Switzerland, grew up in Rio de Janeiro at a French school</li>
+          <li><svg class="i" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Bachelor’s in Amsterdam, exchange in Hong Kong, now in London</li>
+          <li><svg class="i" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V2H6.5A2.5 2.5 0 0 0 4 4.5z"/></svg>Geopolitics and historical literature</li>
+        </ul>
+      </div>
+      <div class="interest">
+        <div class="ico"><svg class="i" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+        <h3>Culture &amp; Sport</h3>
+        <ul>
+          <li><svg class="i" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 2v20M17 2v20M2 12h20"/></svg>Latin music and Brazilian cinema</li>
+          <li><svg class="i" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Volleyball and swimming</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reading list: copy one <article> block to add a book, delete one to remove it -->
+  <section class="card" id="reading">
+    <h2><svg class="i" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V2H6.5A2.5 2.5 0 0 0 4 4.5z"/><path d="M4 19.5V22h16"/></svg>Reading List</h2>
+    <div class="writing">
+      <article class="post">
+        <div class="post-src"><span class="rtype">Book</span>Lawrence Lessig · 1999</div>
+        <h3>Code and Other Laws of Cyberspace</h3>
+        <p class="rnote">Argues that software architecture regulates behaviour as powerfully as law does.</p>
+        <ul class="tags"><li>Tech regulation</li></ul>
+      </article>
+      <article class="post">
+        <div class="post-src"><span class="rtype">Article</span>Lina M. Khan · Yale Law Journal, 2017</div>
+        <h3>Amazon’s Antitrust Paradox</h3>
+        <p class="rnote">Questions whether the consumer-welfare standard can capture platform power.</p>
+        <ul class="tags"><li>Competition</li><li>Platforms</li></ul>
+      </article>
+      <article class="post">
+        <div class="post-src"><span class="rtype">Book</span>Michael Lewis · 2010</div>
+        <h3>The Big Short</h3>
+        <p class="rnote">How a handful of investors saw the 2008 crash coming in the mortgage-bond market.</p>
+        <ul class="tags"><li>Finance</li></ul>
+      </article>
+      <article class="post">
+        <div class="post-src"><span class="rtype">Book</span>Mary Beard · 2015</div>
+        <h3>SPQR: A History of Ancient Rome</h3>
+        <p class="rnote">A thousand years of Rome, from founding myth to empire-wide citizenship.</p>
+        <ul class="tags"><li>History</li></ul>
+      </article>
+      <article class="post">
+        <div class="post-src"><span class="rtype">Book</span>The Secret Barrister · 2018</div>
+        <h3>Stories of the Law and How It’s Broken</h3>
+        <p class="rnote">An anonymous barrister’s sharp, funny account of how England’s criminal courts really work.</p>
+        <ul class="tags"><li>UK courts</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <footer>© 2026 Sara Cosivi</footer>
+</div>
+
+<a class="to-top" id="toTop" href="#top" aria-label="Back to top"><svg class="i" viewBox="0 0 24 24" style="width:22px;height:22px"><path d="m18 15-6-6-6 6"/></svg></a>
+
+<script>
+  const root = document.documentElement, btn = document.getElementById('theme');
+  const mq = matchMedia('(prefers-color-scheme: dark)');
+  const isDark = () => root.dataset.theme ? root.dataset.theme === 'dark' : mq.matches;
+  const sync = () => { btn.classList.toggle('dark', isDark()); btn.setAttribute('aria-pressed', isDark()); };
+  btn.addEventListener('click', () => { root.dataset.theme = isDark() ? 'light' : 'dark'; sync(); });
+  mq.addEventListener('change', sync); sync();
+
+  const links = [...document.querySelectorAll('.dots a')];
+  const obs = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) links.forEach(l => l.classList.toggle('active', l.hash === '#' + e.target.id));
+  }), { rootMargin: '-45% 0px -50% 0px' });
+  document.querySelectorAll('section.card').forEach(s => obs.observe(s));
+
+  const top = document.getElementById('toTop');
+  addEventListener('scroll', () => top.classList.toggle('show', scrollY > 600), { passive: true });
+</script>
+</body>
+</html>
