@@ -51,7 +51,11 @@
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
   body { margin: 0; background: var(--bg); color: var(--text); font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
          font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-  a { color: inherit; }
+  a { color: inherit; text-underline-offset: 3px; }
+  h3 a, .bullets a { text-decoration: underline; text-decoration-color: var(--line); text-decoration-thickness: 1.5px; }
+  h3 a:hover, .bullets a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+  a.chip.cert-link { color: var(--accent); }
+  .ext { width: .75em; height: .75em; margin-left: 4px; vertical-align: baseline; opacity: .6; }
   :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
   svg.i { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
 
@@ -279,7 +283,7 @@
         </div>
         <ul class="bullets">
           <li><b>Grade:</b> 7.65/10 (2:1 equivalent).</li>
-          <li><b>Thesis:</b> <em>Same Directive, Different Outcomes</em>, a comparative study of gender quotas on corporate boards (8.1/10).</li>
+          <li><b>Thesis:</b> <a href="thesis.pdf" target="_blank" rel="noopener"><em>Same Directive, Different Outcomes</em><svg class="i ext" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a>, a comparative study of gender quotas on corporate boards (8.1/10).</li>
           <li><b>Activities:</b> PPLE volleyball team; SIB Amsterdam committee, organising the 2024 Networking Gala (150+ guests) and a visit to the International Criminal Court.</li>
           <li><b>Exchange:</b></li>
         </ul>
@@ -362,7 +366,7 @@
       <div class="logo"><img src="https://extraordinary.com/favicon.ico" data-alt="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://extraordinary.com&size=64" data-i="EX" alt="" onerror="logoFail(this)"></div>
       <div>
         <div class="item-head">
-          <div><h3>Extraordinary</h3><p class="role">Content Research &amp; Writing · Legal Tech</p></div>
+          <div><h3><a href="https://extraordinary.com/" target="_blank" rel="noopener">Extraordinary<svg class="i ext" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a></h3><p class="role">Content Research &amp; Writing · Legal Tech</p></div>
           <div class="meta"><span class="dates">Jun 2025 — Aug 2025</span><span class="place">San Francisco (remote) 🇺🇸</span></div>
         </div>
         <p class="about">Start-up pairing immigration lawyers with software to secure O-1 visas, backed by Founders Fund, Andreessen Horowitz and Paradigm.</p>
@@ -456,12 +460,12 @@
     <div class="writing">
       <article class="post">
         <div class="post-src"><div class="logo"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://o2k.tech&size=64" alt="" onerror="this.outerHTML='<span class=lf>O2K</span>'"></div>O2K.tech · April 2026</div>
-        <h3>EU Inc. Explained: What the 28th Regime Means for Startups</h3>
+        <h3><a href="https://www.o2k.tech/blog/eu-inc-explained-what-the-28th-regime-means-for-startups-in-2026" target="_blank" rel="noopener">EU Inc. Explained: What the 28th Regime Means for Startups<svg class="i ext" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a></h3>
         <ul class="tags"><li>EU company law</li><li>Startups</li></ul>
       </article>
       <article class="post">
         <div class="post-src"><div class="logo"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://o2k.tech&size=64" alt="" onerror="this.outerHTML='<span class=lf>O2K</span>'"></div>O2K.tech · April 2026</div>
-        <h3>Why Europe Can’t Turn €35 Trillion in Savings Into Growth</h3>
+        <h3><a href="https://www.o2k.tech/blog/why-europe-cant-turn-eu35-trillion-in-savings-into-growth" target="_blank" rel="noopener">Why Europe Can’t Turn €35 Trillion in Savings Into Growth<svg class="i ext" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a></h3>
         <ul class="tags"><li>Capital markets</li><li>EU policy</li></ul>
       </article>
       <article class="post">
@@ -471,7 +475,8 @@
       </article>
       <article class="post">
         <div class="post-src"><div class="logo"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.rostraeconomica.nl&size=64" alt="" onerror="this.outerHTML='<span class=lf>RE</span>'"></div>Rostra Economica · December 2023</div>
-<h3><a href="https://www.rostraeconomica.nl/post/an-amnesty-law-in-exchange-of-a-new-government" target="_blank">An Amnesty Law in Exchange for a New Government</a></h3>        <ul class="tags"><li>Constitutional law</li><li>Spain</li></ul>
+        <h3><a href="https://www.rostraeconomica.nl/post/an-amnesty-law-in-exchange-of-a-new-government" target="_blank" rel="noopener">An Amnesty Law in Exchange for a New Government<svg class="i ext" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a></h3>
+        <ul class="tags"><li>Constitutional law</li><li>Spain</li></ul>
       </article>
     </div>
   </section>
@@ -530,12 +535,12 @@
     <h2><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></svg>Certificates &amp; Events</h2>
     <div class="cert">
       <div class="cert-org"><div class="logo"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=www.cliffordchance.com&size=64" alt="" onerror="this.outerHTML='<span class=lf>CC</span>'"></div>Clifford Chance</div>
-      <div><span class="chip">Cyber Security Virtual Internship</span></div>
+      <div><a class="chip cert-link" href="https://www.theforage.com/completion-certificates/qbcPPWhE6mhQeKgdy/33CKX5eTKH3dXer7X_qbcPPWhE6mhQeKgdy_sy9BS9KgaPJGhi2Xd_1794480686775_completion_certificate.pdf" target="_blank" rel="noopener">Cyber Security Virtual Internship<svg class="i ext" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
       <p>ICO dawn raid guidance, data breach response and a data-related damages claim. Nov 2026</p>
     </div>
     <div class="cert">
       <div class="cert-org"><div class="logo"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=www.twobirds.com&size=64" alt="" onerror="this.outerHTML='<span class=lf>B&amp;B</span>'"></div>Bird &amp; Bird</div>
-      <div><span class="chip">Commercial Law Virtual Experience</span></div>
+      <div><a class="chip cert-link" href="https://www.theforage.com/completion-certificates/4pnwiweZMZ366HjYC/vRvSjf2GWLFZQSegM_4pnwiweZMZ366HjYC_sy9BS9KgaPJGhi2Xd_1794339855718_completion_certificate.pdf" target="_blank" rel="noopener">Commercial Law Virtual Experience<svg class="i ext" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
       <p>Trade mark infringement memo, software licence drafting and patent analysis. Nov 2026</p>
     </div>
     <div class="cert">
